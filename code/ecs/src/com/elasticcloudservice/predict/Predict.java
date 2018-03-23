@@ -1,8 +1,13 @@
 package com.elasticcloudservice.predict;
 
+import com.filetool.util.LogUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 
+ */
 public class Predict {
 
 	public static String[] predictVm(String[] ecsContent, String[] inputContent) {
@@ -15,10 +20,10 @@ public class Predict {
 
 		for (int i = 1; i < ecsContent.length; i++) {
 
-			if (ecsContent[i].contains(" ")
-					&& ecsContent[i].split(" ").length == 3) {
+			if (ecsContent[i].contains("\t")
+					&& ecsContent[i].split("\t").length == 3) {
 
-				String[] array = ecsContent[i].split(" ");
+				String[] array = ecsContent[i].split("\t");
 				String uuid = array[0];
 				String flavorName = array[1];
 				String createTime = array[2];
@@ -26,7 +31,8 @@ public class Predict {
 				history.add(uuid + " " + flavorName + " " + createTime);
 			}
 		}
-
+		//test
+		LogUtil.printLog(history.get(0)+"\r\n");
 		for (int i = 1; i < inputContent.length; i++) {
 
 		}

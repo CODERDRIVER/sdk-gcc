@@ -2,7 +2,7 @@
 basepath=$(cd `dirname $0`; pwd)
 APP_HOME=$basepath/..
 
-JAVA=$JAVA_HOME/bin/java
+JAVA=/usr/bin/java
 
 JVM_OPT="-Xms64M -Xmx64M"
 JVM_OPT="$JVM_OPT -Djava.library.path=$APP_HOME/bin"

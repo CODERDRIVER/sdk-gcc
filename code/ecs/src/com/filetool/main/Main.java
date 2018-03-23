@@ -3,6 +3,7 @@ package com.filetool.main;
 import com.elasticcloudservice.predict.Predict;
 import com.filetool.util.FileUtil;
 import com.filetool.util.LogUtil;
+import sun.rmi.runtime.Log;
 
 /**
  * 
@@ -24,6 +25,7 @@ public class Main {
 		String ecsDataPath = args[0];
 		String inputFilePath = args[1];
 		String resultFilePath = args[2];
+
 
 		LogUtil.printLog("Begin");
 
